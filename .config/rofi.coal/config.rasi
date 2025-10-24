@@ -3,6 +3,6 @@ configuration {
   combi-modes: [ window, drun, run ];
 }
 
-@theme "gruvbox-light"
+@theme "/home/coal/dotfiles/.config/rofi/themes/rounded-template.rasi"
  
 /* Insert theme modifications after this */

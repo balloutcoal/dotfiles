@@ -180,4 +180,4 @@ configuration {
 */
 }
 
-@theme "/home/coal/.local/share/rofi/themes/rounded-template.rasi"
+@theme "/home/coal/dotfiles/.config/rofi/themes/rounded-template.rasi"
