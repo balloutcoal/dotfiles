@@ -13,13 +13,8 @@
 
 /* font declared */
 
-.font {
-  font-family: "Font Awesome 7 Free Solid";
-}
-
-.text {
-  font-family: "Iosevka Nerd Font";
-  font-size: 15px;
+* {
+  font-family: "FiraCode Nerd Font";
 }
 
 #custom-openbracket,
