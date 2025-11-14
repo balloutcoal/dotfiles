@@ -80,7 +80,7 @@
     // "ignored-players": ["firefox"]
   },
   "hyprland/window": {
-    "format": "[ {title:.50} ]"
+    "format": "[ {title:.25} ]"
   },
   "hyprland/workspaces#mod1": {
     "disable-scroll": true,
@@ -228,7 +228,7 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "[ {essid} ({signalStrength}%)  ]",
+    "format-wifi": "[ {essid:.20} ({signalStrength}%)  ]",
     "format-ethernet": "[ Wired 󰈀 ]",
     "tooltip-format": "[ {ifname} via {gwaddr} 󰈀] ",
     "format-linked": "[ (No IP) 󰈀] ",
