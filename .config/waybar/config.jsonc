@@ -11,6 +11,7 @@
     "idle_inhibitor",
     "keyboard-state#caps",
     "keyboard-state#num",
+    "power-profiles-daemon",
     "battery",
     "hyprland/window"
     //"hyprland/mode",
@@ -34,6 +35,15 @@
     "custom/power"
   ],
   // modules configuration 
+  "power-profiles-daemon": {
+    "format": "[ {icon} ]",
+    "format-icons": {
+      "performance": "󰈸",
+      "balanced": "󰗑",
+      "power-saver": "",
+      "default": ""
+    }
+  },
   "cava": {
     // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
     "framerate": 30,
@@ -214,17 +224,6 @@
       "󰂀",
       "󰁹"
     ]
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
