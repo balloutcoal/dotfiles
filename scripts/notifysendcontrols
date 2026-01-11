@@ -1,0 +1,18 @@
+#!/bin/bash 
+
+BATTERY_MIN_THRESHOLD=20
+BATTERY_MAX_THRESHOLD=80
+
+TEMP_THRESHOLD=60
+
+BATTERY=$(acpi -b | awk -F', ' '{print $2}' | sed 's/%//')
+TEMP=$(SENSORS | grep 'Core 0' | awk '{print $3}' | sed 's/+//g' | sed 's/°C//g')
+
+if [ "$BATTERY" -eq "$BATTERY_MIN_THRESHOLD" ]; then
+  notify-send "Low battery: ($BATTERY_MIN_THRESHOLD%)"
+fi
+
+if [ "$BATTERY" -eq "$BATTERY_MAX_THRESHOLD" ]; then
+  notify-send "Sufficent battery: ($BATTERY_MAX_THRESHOLD%)"
+fi
+
