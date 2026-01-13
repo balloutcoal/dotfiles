@@ -9,9 +9,10 @@
   "modules-left": [
     "pulseaudio",
     "idle_inhibitor",
-    "keyboard-state#caps",
-    "keyboard-state#num",
+    // "keyboard-state#caps",
+    // "keyboard-state#num",
     "power-profiles-daemon",
+    "pulseaudio#microphone",
     "battery",
     "hyprland/window"
     //"hyprland/mode",
@@ -27,12 +28,9 @@
     "cava",
     "mpris",
     "network",
-    "cpu",
-    "memory",
-    "temperature",
+    "group/system",
     "backlight",
     "tray",
-    "custom/power"
   ],
   // modules configuration 
   "power-profiles-daemon": {
@@ -43,6 +41,25 @@
       "power-saver": "",
       "default": ""
     }
+  },
+  "group/system": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "system-group",
+      "click-to-reveal": true
+    },
+    "modules": [
+      "temperature",
+      "cpu",
+      "memory"
+    ]
+  },
+  "pulseaudio#microphone": {
+    "format": "[ {format_source} ]",
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
+    "on-click": "pamixer --default-source -t"
   },
   "cava": {
     // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
@@ -236,11 +253,11 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "[ {volume}% {icon} {format_source} ]",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
+    "format": "[ {volume}% {icon} ]",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": "",
+    "format-source": "",
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",

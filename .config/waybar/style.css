@@ -41,22 +41,22 @@ window#waybar.empty #window {
 
 /* configuring the modules */
 .modules-left {
-  margin: 3px 0 3px 10px;
-  padding: 0 0 0 7px;
+  margin: 0 1px;
+  padding: 0 1px;
   background-color: @background;
   border: 2px solid @focused;
 }
 
 .modules-center {
-  margin: 3px 0 3px 0;
-  padding: 0 10px 0 10px;
+  margin: 0 1px;
+  padding: 0 1px;
   background-color: @background;
   border: 2px solid @focused;
 }
 
 .modules-right {
-  margin: 3px 10px 3px 0;
-  padding: 0 10px 0 10px;
+  margin: 0 1px;
+  padding: 0 1px;
   background-color: @background;
   border: 2px solid @focused;
 }
@@ -139,8 +139,11 @@ button {
 #memory,
 #custom-clipboard,
 #custom-bluetooth,
-#network {
-  padding: 0 10px;
+#network,
+#idle_inhibitor, 
+#custom-powerprofile, 
+#keyboard-state {
+  padding: 2px 2px;
 }
 
 #clock:hover,
@@ -156,23 +159,11 @@ button {
   color: @color1;
 }
 
-#idle_inhibitor {
-  padding: 0 10px 0 0;
-}
-
-#custom-powerprofile {
-  padding: 0 8px 0 4px;
-}
-
-/* keyboard-state */
-#keyboard-state {
-  padding: 0 3px;
-}
-
 /* Remaining Modules */
 #backlight,
-#wireplumber {
-  padding: 0 5px;
+#wireplumber,
+#battery {
+  padding: 2px 2px;
 }
 
 #wireplumber.muted {
