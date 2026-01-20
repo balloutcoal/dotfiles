@@ -107,7 +107,7 @@
     // "ignored-players": ["firefox"]
   },
   "hyprland/window": {
-    "format": "[ {title:.25} ]"
+    "format": "[ {title:.40} ]"
   },
   "hyprland/workspaces#mod1": {
     "disable-scroll": true,
